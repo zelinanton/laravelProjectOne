@@ -13,16 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-Route::get('/features', function () {
-    return view('features');
-});
-Route::get('/pricing', function () {
-    return view('pricing');
-});
+Route::get('/', 'App\Http\Controllers\MainController@home');
 
-Route::get('/user/{id}/{name}', function ($id, $name) {
-    return 'ID: '. $id.'. Name: '.$name;
-});
+Route::get('/features', 'App\Http\Controllers\MainController@features');
+
+Route::get('/pricing', 'App\Http\Controllers\MainController@pricing');
+
+Route::get('/reviews', 'App\Http\Controllers\MainController@reviews')->name('reviews');
+
+Route::post('/reviews/check', 'App\Http\Controllers\MainController@reviews_check');

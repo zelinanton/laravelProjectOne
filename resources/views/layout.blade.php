@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-bs-theme="dark" lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +19,7 @@
         <li><a href="/" class="nav-link px-2 text-white" id="home">Home</a></li>
         <li><a href="/features" class="nav-link px-2 text-white" id="features">Features</a></li>
         <li><a href="/pricing" class="nav-link px-2 text-white" id="pricing">Pricing</a></li>
-        <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+        <li><a href="/reviews" class="nav-link px-2 text-white" id="reviews">Reviews</a></li>
         <li><a href="#" class="nav-link px-2 text-white">About</a></li>
       </ul>
 
@@ -28,8 +28,8 @@
       </form>
 
       <div class="text-end">
-        <button type="button" class="btn btn-outline-light me-2">Login</button>
-        <button type="button" class="btn btn-warning">Sign-up</button>
+        <button type="button" id="login-btn" class="btn btn-outline-light me-2">Login</button>   
+        <button type="button" id="sign-up-btn" class="btn btn-warning">Sign-up</button>
       </div>
     </div>
   </div>
@@ -39,6 +39,39 @@
   <div class="container">
     @yield('main_content')
   </div>
+
+  <div class="modal hide" style="margin-top: 7rem;" id="login">
+    <form class="form-modal">
+      <div class="modal-close" id="close-login">&times;</div>
+      <h1 class="text-white forms text-shadow">Login</h1>
+      <div class="forms center">
+        <input id="email-form" class="form" type="email" placeholder="Email">
+        <input id="password-form" class="form" type="password" placeholder="Password">
+        <div class="text-white" style="padding: 0.75rem 0; margin: auto;">
+          <input type="checkbox" id="rememberMe">
+          <label class="text-shadow" for="rememberMe">Remember me</label>
+        </div>
+        <button class="btn btn-primary w-100 py-2" type="submit">Login</button>
+      </div>  
+    </form>
+  </div>
+
+  <div class="modal hide" style="margin-top: 7rem;" id="sign-up">
+    <form class="form-modal">
+      <div class="modal-close" id="close">&times;</div>
+      <h1 class="text-white forms text-shadow">Sign-up</h1>
+      <div class="forms center">
+        <input id="email-form" class="form" type="email" placeholder="Email">
+        <input id="password-form" class="form" type="password" placeholder="Password">
+        <div class="text-white" style="padding: 0.75rem 0; margin: auto;">
+          <input type="checkbox" id="rememberMe">
+          <label class="text-shadow" for="rememberMe">Remember me</label>
+        </div>
+        <button class="btn btn-primary w-100 py-2" type="submit">Sign-up</button>
+      </div>  
+    </form>
+  </div>
+
   <script src="{{ URL::asset('script.js') }}"></script>
 </body>
 </html>
