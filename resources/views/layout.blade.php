@@ -39,7 +39,7 @@
   <div class="container">
     @yield('main_content')
   </div>
-
+  
   <div class="modal hide" style="margin-top: 7rem;" id="login">
     <form class="form-modal">
       <div class="modal-close" id="close-login">&times;</div>

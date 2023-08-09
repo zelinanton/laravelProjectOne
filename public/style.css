@@ -14,7 +14,11 @@
 .forms{
   margin: 0 auto;
   margin-top: 24px;
-  width: fit-content;
+  width: 90%;
+  word-break: break-word;
+}
+.forms-fields-width{
+  width: 40%;
 }
 .form{
   min-height: 54px;
@@ -29,31 +33,9 @@
   float: left;
   margin-left: -1.5em;
 }
-.form-modal{
-  border: 1px #adb5bd solid;
-  /* border-bottom-left-radius: 0.375rem;
-  border-bottom-right-radius: 0.375rem; */
-  background-color: #212529;
-  width: fit-content;
+.reviews-content{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 80%;
   margin: 0 auto;
-  padding: 3rem;
-  padding-top: 0;
-}
-.modal-close{
-  position:absolute;
-  top: 3px;
-  right: 612px;
-  font-size:30px;
-  color: #adb5bd;
-  opacity:.5;
-  font-weight:700;
-  border:none;
-  background-color: transparent;
-  cursor:pointer
-}
-.show{
-  display: inline;
-}
-.hide{
-  display: none;
 }

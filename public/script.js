@@ -28,43 +28,11 @@ if(currentUrl == homeURL){
 //Modal Login
 
 const modalLoginBtn = document.getElementById('login-btn');
-const modalLogin = document.getElementById('login');
-const modalLoginClose = document.getElementById('close-login');
-
-function openModalLogin() {
-  modalLogin.classList.add('show');
-  modalLogin.classList.remove('hide');
-  if(modalSignUp.classList.contains('show')){
-    closeModalSignUp();
-  }
-}
-
-function closeModalLogin() {
-  modalLogin.classList.add('hide');
-  modalLogin.classList.remove('show');
-}
-
-modalLoginBtn.addEventListener('click', openModalLogin);
-modalLoginClose.addEventListener('click', closeModalLogin);
-
-//Modal Sign-up
-
 const modalSignUpBtn = document.getElementById('sign-up-btn');
-const modalSignUp = document.getElementById('sign-up');
-const modalSignUpClose = document.getElementById('close');
 
-function openModalSignUp() {
-  modalSignUp.classList.add('show');
-  modalSignUp.classList.remove('hide');
-  if(modalLogin.classList.contains('show')){
-    closeModalLogin();
-  }
-}
-
-function closeModalSignUp() {
-  modalSignUp.classList.add('hide');
-  modalSignUp.classList.remove('show');
-}
-
-modalSignUpBtn.addEventListener('click', openModalSignUp);
-modalSignUpClose.addEventListener('click', closeModalSignUp);
+modalLoginBtn.addEventListener('click', () => {
+  window.location.href = `${homeURL}login`;
+});
+modalSignUpBtn.addEventListener('click', () => {
+  window.location.href = `${homeURL}register`;
+});
