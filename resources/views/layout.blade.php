@@ -6,6 +6,7 @@
   <title>@yield('title')</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="{{ URL::asset('style.css') }}">
+  <link rel="shortcut icon" href="{{ URL::asset('icons8-north-korea-48.png') }}">
 </head>
 <body class="bg-dark">
   <header class="p-3 text-bg-dark border-bottom">
@@ -29,7 +30,7 @@
 
       <div class="text-end">
         <button type="button" id="login-btn" class="btn btn-outline-light me-2">Login</button>   
-        <button type="button" id="sign-up-btn" class="btn btn-warning">Sign-up</button>
+        <button type="button" id="register-btn" class="btn btn-warning">Register</button>
       </div>
     </div>
   </div>
@@ -38,38 +39,6 @@
 
   <div class="container">
     @yield('main_content')
-  </div>
-  
-  <div class="modal hide" style="margin-top: 7rem;" id="login">
-    <form class="form-modal">
-      <div class="modal-close" id="close-login">&times;</div>
-      <h1 class="text-white forms text-shadow">Login</h1>
-      <div class="forms center">
-        <input id="email-form" class="form" type="email" placeholder="Email">
-        <input id="password-form" class="form" type="password" placeholder="Password">
-        <div class="text-white" style="padding: 0.75rem 0; margin: auto;">
-          <input type="checkbox" id="rememberMe">
-          <label class="text-shadow" for="rememberMe">Remember me</label>
-        </div>
-        <button class="btn btn-primary w-100 py-2" type="submit">Login</button>
-      </div>  
-    </form>
-  </div>
-
-  <div class="modal hide" style="margin-top: 7rem;" id="sign-up">
-    <form class="form-modal">
-      <div class="modal-close" id="close">&times;</div>
-      <h1 class="text-white forms text-shadow">Sign-up</h1>
-      <div class="forms center">
-        <input id="email-form" class="form" type="email" placeholder="Email">
-        <input id="password-form" class="form" type="password" placeholder="Password">
-        <div class="text-white" style="padding: 0.75rem 0; margin: auto;">
-          <input type="checkbox" id="rememberMe">
-          <label class="text-shadow" for="rememberMe">Remember me</label>
-        </div>
-        <button class="btn btn-primary w-100 py-2" type="submit">Sign-up</button>
-      </div>  
-    </form>
   </div>
 
   <script src="{{ URL::asset('script.js') }}"></script>

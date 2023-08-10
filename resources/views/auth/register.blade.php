@@ -1,4 +1,9 @@
+<title>Register</title>
+
 <x-guest-layout>
+
+    <h1 class="text-white text-center">Register</h1>
+    
     <form method="POST" action="{{ route('register') }}">
         @csrf
 

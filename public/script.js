@@ -27,12 +27,12 @@ if(currentUrl == homeURL){
 
 //Modal Login
 
-const modalLoginBtn = document.getElementById('login-btn');
-const modalSignUpBtn = document.getElementById('sign-up-btn');
+const loginBtn = document.getElementById('login-btn');
+const registerBtn = document.getElementById('register-btn');
 
-modalLoginBtn.addEventListener('click', () => {
+loginBtn.addEventListener('click', () => {
   window.location.href = `${homeURL}login`;
 });
-modalSignUpBtn.addEventListener('click', () => {
+registerBtn.addEventListener('click', () => {
   window.location.href = `${homeURL}register`;
 });
