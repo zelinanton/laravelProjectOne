@@ -39,3 +39,30 @@
   width: 80%;
   margin: 0 auto;
 }
+.text-decoration-uline{
+  text-decoration: underline;
+}
+.text-decoration-uline:hover{
+  text-decoration: none;
+}
+.dropdown-links{
+  padding-top: 0px !important;
+  margin: 0;
+  padding-bottom: 0px !important;
+}
+.dropdown-link-colors{
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px 10px;
+}
+.dropdown-link-top{
+  border-radius: 5px 5px 0px 0px;
+}
+.dropdown-link-bottom{
+  border-radius: 0px 0px 5px 5px;
+  margin: 0;
+}
+.dropdown-link-colors:hover{
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+  color: #ffffff;
+}
