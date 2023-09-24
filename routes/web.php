@@ -16,19 +16,22 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'App\Http\Controllers\MainController@home');
 
-Route::get('/features', 'App\Http\Controllers\MainController@features');
-
-Route::get('/pricing', 'App\Http\Controllers\MainController@pricing');
-
 Route::get('/reviews', 'App\Http\Controllers\MainController@reviews')->name('reviews');
 
 Route::post('/reviews/check', 'App\Http\Controllers\MainController@reviews_check');
+
+Route::get('/products', 'App\Http\Controllers\MainController@products')->name('products');
+
+Route::post('/products/edit', 'App\Http\Controllers\MainController@products_edit');
+
+Route::get('/basket', 'App\Http\Controllers\MainController@basket');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
+    
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

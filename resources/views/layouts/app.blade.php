@@ -19,12 +19,12 @@
 @section('main_content')
     <body class="font-sans antialiased bg-dark">
         
-        <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+        <div class="min-h-screen bg-gray-100 dark:bg-gray-900 bg-dark margin-top-upper">
             @include('layouts.navigation')
 
             <!-- Page Heading -->
             @if (isset($header))
-                <header class="dark:bg-gray-800 shadow">
+                <header class="dark:bg-gray-800 shadow border-radius-bottom">
                     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                         {{ $header }}
                     </div>
@@ -32,7 +32,7 @@
             @endif
 
             <!-- Page Content -->
-            <main>
+            <main class="bg-dark">
                 {{ $slot }}
             </main>
         </div>

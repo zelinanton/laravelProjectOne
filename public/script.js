@@ -1,11 +1,10 @@
 'use strict';
 
 let idHome = document.getElementById('home');
-let idFeatures = document.getElementById('features');
-let idPricing = document.getElementById('pricing');
 let idReviews = document.getElementById('reviews');
+let idProducts = document.getElementById('products');
 let homeURL = "http://laravelprojectone.loc/";
-let arrID = [idHome, idPricing, idReviews];
+let arrID = [idHome, idReviews];
 const currentUrl = window.location.href;
 if(currentUrl == homeURL){
   arrID.forEach(elem => elem.classList.remove('text-secondary'));
@@ -24,15 +23,3 @@ if(currentUrl == homeURL){
   idReviews.classList.remove("text-white");
   idReviews.classList.add("text-secondary");
 }
-
-//Modal Login
-
-const loginBtn = document.getElementById('login-btn');
-const registerBtn = document.getElementById('register-btn');
-
-loginBtn.addEventListener('click', () => {
-  window.location.href = `${homeURL}login`;
-});
-registerBtn.addEventListener('click', () => {
-  window.location.href = `${homeURL}register`;
-});

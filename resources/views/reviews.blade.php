@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title')Reviews @endsection
+@section('title')Отзывы @endsection
 
 @section('main_content')
   <!-- <h1 class="text-center text-white">Форма добавления отзыва</h1> -->
@@ -14,7 +14,7 @@
       </ul>
     </div>
   @endif
-  <h1 class="display-4 fw-normal text-body-emphasis text-center text-white forms">Reviews</h1>
+  <h1 class="display-4 fw-normal text-body-emphasis text-center text-white forms">Отзывы</h1>
   <form method="post" class="forms text-center forms-fields-width" action="/reviews/check">
     @csrf
     <input type="email" name="email" id="email" placeholder="Введите email" class="form-control">
@@ -22,7 +22,7 @@
     <textarea name="message" id="message" class="form-control" placeholder="Введите сообщение"></textarea><br>
     <button type="submit" class="btn btn-success">Отправить</button>
   </form>
-  <h1 class="text-center text-white forms">All reviews</h1>
+  <h1 class="text-center text-white forms">Все отзывы</h1>
   <div class="reviews-content">
     @foreach($reviews as $el)    
       <div class="alert alert-warning forms">
