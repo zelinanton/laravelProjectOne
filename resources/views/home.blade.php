@@ -11,7 +11,7 @@
         <img src="img/{{ $el->image }}"></img>
         <div>
           <b>{{ $el->name }}</b>
-          <p>{{ $el->price }}</p>
+          <h3><p>{{ $el->price }}<span style="font-size: 60%;">₴</span></p></h3>
           <button id="button">Добавить в корзину</button>
         </div>
       </div>

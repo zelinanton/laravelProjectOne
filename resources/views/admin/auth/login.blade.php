@@ -1,6 +1,6 @@
 <title>Войти</title>
 <x-guest-layout>
-<h1 class="text-white text-center">Войти</h1>
+<h1 class="text-white text-center">Войти в кабинет администратора</h1>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 

@@ -34,10 +34,6 @@
                         </button>
                     </x-slot>
                     <x-slot name="content">
-                        <x-dropdown-link :href="route('products')">
-                            {{ __('Добавить товар')}}
-                        </x-dropdown-link>
-                        
                         <x-dropdown-link :href="route('profile.edit')">
                             {{ __('Профиль') }}
                         </x-dropdown-link>

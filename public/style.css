@@ -57,8 +57,7 @@ button{
 }
 .reviews-content{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  width: 80%;
+  grid-template-columns: repeat(5, 1fr);
   margin: 0 auto;
 }
 .text-decoration-uline{
