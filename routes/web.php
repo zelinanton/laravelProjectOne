@@ -20,10 +20,6 @@ Route::get('/reviews', 'App\Http\Controllers\MainController@reviews')->name('rev
 
 Route::post('/reviews/check', 'App\Http\Controllers\MainController@reviews_check');
 
-Route::get('/products', 'App\Http\Controllers\MainController@products')->name('products');
-
-Route::post('/products/edit', 'App\Http\Controllers\MainController@products_edit');
-
 Route::get('/basket', 'App\Http\Controllers\MainController@basket');
 
 Route::get('/dashboard', function () {
@@ -42,5 +38,11 @@ require __DIR__.'/auth.php';
 Route::get('/admin/dashboard', function () {
     return view('admin.dashboard');
 })->middleware(['auth:admin', 'verified'])->name('admin.dashboard');
+
+Route::get('/admin/products', function() {
+    return view('admin.products');
+})->middleware(['auth:admin', 'verified'])->name('admin.products');
+
+Route::post('/admin/products/edit', 'App\Http\Controllers\MainController@products_edit');
 
 require __DIR__.'/adminauth.php';

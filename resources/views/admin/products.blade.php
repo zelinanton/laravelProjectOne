@@ -13,7 +13,7 @@
         <form method="post" 
               class="forms text-center forms-fields-width" 
               accept="image/*" 
-              action="/products/edit">
+              action="/admin/products/edit">
           @csrf
           <input type="file" name="image" id="image" class="form-control">
           <input type="text" name="name" id="name" placeholder="Введите название товара" class="form-control">

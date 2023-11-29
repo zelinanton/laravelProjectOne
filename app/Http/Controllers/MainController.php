@@ -20,7 +20,7 @@ class MainController extends Controller
 
     public function products() {
         $products = new Product();
-        return view('products', ['products' => $products->all()]);
+        return view('admin/products', ['products' => $products->all()]);
     }
 
     public function reviews_check(Request $request){
